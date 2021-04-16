@@ -1,0 +1,403 @@
+html,
+body {
+	margin: 0px;
+	padding: 0px;
+	/*resetando margem e padding*/
+	/* font-size: 0; -> resetar o tamanho da fonte*/
+}
+
+/* outra cor rep = #fd2017 */
+
+body {
+	background-color: #000;
+	font-family: "Ubuntu", sans-serif;
+	height: 800px;
+}
+
+.capa {
+	color: #dee7e7;
+}
+
+.capa span {
+	color: #ffb602;
+	display: block;
+}
+
+.navigation {
+	color: #dee7e7;
+	height: 50px;
+	animation-name: navegacao;
+	animation-duration: 3s;
+}
+
+.navigation li {
+	display: inline-block;
+	padding-left: 30px;
+	padding-right: 30px;
+	line-height: 50px; /*o texto é automaticamente e verticalmente alinhado no centro da linha*/
+	font-size: 18px;
+	color: #dee7e7;
+}
+
+.navigation a {
+	color: #dee7e7;
+	text-decoration: none;
+}
+
+.navigation a:hover {
+	color: #ffb602;
+}
+
+.navigation ul {
+	margin-top: 0px;
+	list-style: none;
+	padding-left: 0;
+	text-align: right;
+	height: 50px;
+}
+
+.capa div {
+	display: inline-block; /*serve parq colocar um texto ao lado do outro*/
+	height: 650px;
+}
+
+/*Usar width como % para fazer um site mais responsivo*/
+.profile-pic {
+	vertical-align: top;
+	width: 40%;
+	text-align: center;
+}
+
+.profile-title {
+	width: 59%;
+	animation-name: profile-titulo;
+	animation-duration: 2s;
+}
+
+.profile-title h1 {
+	margin-top: 200px;
+	font-size: 58px;
+	line-height: 54px;
+}
+
+.profile-title h2 {
+	color: #dee7e7;
+}
+
+#foto-de-perfil {
+	width: 350px;
+	border-radius: 350px;
+	text-align: center;
+	margin-top: 100px;
+	animation-name: profile-capa;
+	animation-duration: 2s;
+}
+
+/*Currículo*/
+
+.main {
+	padding: 80px 180px 80px 100px;
+	animation-name: conteudo-chegando;
+	animation-duration: 2s;
+}
+
+#foto-de-perfil-galera {
+	float: left;
+	width: 300px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.main h1 {
+	color: #dee7e7;
+	font-weight: normal;
+}
+
+.main h2 {
+	color: #dee7e7;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: normal;
+	margin-top: 40px;
+}
+
+.main h3 {
+	color: #ffb602;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.main p {
+	font-size: 18px;
+	font-weight: 100;
+	color: #dee7e7;
+	line-height: 24px;
+	text-align: justify;
+}
+
+.navigation-caminho {
+	list-style: none;
+	padding-left: 0;
+	color: #808080;
+}
+
+.navigation-caminho a {
+	color: #808080;
+	text-decoration: none;
+}
+
+.navigation-caminho a:hover {
+	color: #ffb602;
+}
+
+.navigation-caminho li {
+	display: inline-block;
+}
+
+/*Contatos*/
+
+#social-photos img {
+	width: 50px;
+	margin-right: 15px;
+	align-items: baseline;
+}
+
+#zapzap-foto {
+	width: 25px;
+	margin-left: 15px;
+	display: inline-block;
+	text-align: center;
+	align-items: baseline;
+}
+
+.voltar-inicio {
+	font-size: 15px;
+	margin-top: 20px;
+	color: #dee7e7;
+}
+
+.voltar-inicio:hover {
+	color: #ffb602;
+}
+
+.link-contato {
+	color: #ffb602;
+}
+
+/*Portifólio*/
+
+.miniatura {
+	width: 320px;
+	height: 320px;
+	display: inline-block;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	background-size: contain;
+	overflow: hidden;
+}
+
+.miniatura h3 {
+	color: #dee7e7;
+	font-weight: 100;
+}
+
+.miniatura a {
+	text-decoration: none;
+}
+
+.black-box {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0;
+	padding-top: 130px;
+	transition: 1s;
+}
+
+/* só funciona quando estiver com o mouse em cima do elemento */
+.black-box:hover {
+	opacity: 0.8;
+	transition: 1s;
+}
+
+.black-box-text {
+	text-align: center;
+}
+
+.black-box-text h1 {
+	margin-top: 0;
+	font-size: 16px;
+	color: #ffb602;
+	text-transform: uppercase;
+}
+
+.black-box-text h2 {
+	font-weight: 100;
+	text-transform: none;
+	margin-top: 0;
+}
+
+.black-box-text h3 {
+	color: #dee7e7;
+	font-weight: 100;
+}
+
+.fotos-trab {
+	width: 100%;
+}
+
+.navigation li.three-line-button {
+	display: none;
+}
+
+.main iframe {
+	width: 400px;
+	height: 300px;
+}
+
+.vagas a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* 0% e 100% dependem do tempo da animação que vai acontecer */
+/* Animações de "chegada" dos elementos */
+
+@keyframes profile-capa {
+	0% {
+		opacity: 0;
+		transform: translate(0, 20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes profile-titulo {
+	0% {
+		opacity: 0;
+		transform: translate(0, -20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes navegacao {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes conteudo-chegando {
+	0% {
+		opacity: 0;
+		transform: translate(-20px, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+/* Para o celular -> responsividade*/
+
+@media (max-width: 1000px) {
+	.navigation li {
+		display: none;
+	}
+
+	.navigation li.three-line-button {
+		display: inline-block;
+	}
+
+	.three-line-button:hover {
+		color: #ffb602;
+		cursor: pointer;
+	}
+
+	.capa div {
+		display: block;
+		height: auto;
+	}
+
+	.profile-pic {
+		width: 100%;
+	}
+
+	#foto-de-perfil {
+		margin-top: 30px;
+		max-width: 80%; /* Usado para mudar o tamanho da imagem de forma dinâmica*/
+	}
+
+	.profile-title {
+		width: 100%;
+		text-align: center;
+	}
+
+	.profile-title h1 {
+		margin-top: 30px;
+		font-size: 40px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.profile-title h2 {
+		margin-top: 20px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.main {
+		padding: 10px 5% 40px 5%;
+		line-height: 30px;
+	}
+
+	.main p {
+		text-align: left;
+	}
+
+	.navigation-caminho li {
+		font-size: 14px;
+	}
+
+	#foto-de-perfil-curriculo {
+		max-width: 100%;
+		float: none;
+	}
+
+	.miniatura {
+		max-width: 100%;
+		background-size: auto 100%;
+	}
+
+	.black-box {
+		opacity: 0.8;
+	}
+
+	.menujs {
+		height: auto;
+	}
+
+	.menujs ul {
+		height: auto;
+		text-align: center;
+		padding-right: 20%;
+		padding-left: 20%;
+	}
+
+	.menujs li {
+		display: block;
+		border-bottom: solid #dee7e7 1px;
+	}
+}
